@@ -1,0 +1,41 @@
+<?php global $current_user; get_currentuserinfo();
+	$user = $user ? new WP_User( $user ) : wp_get_current_user();
+	$d= array_keys( $user->allcaps );
+$levelname = ($d[count($d)-1]);
+
+
+switch ($levelname) {
+	case "administrator":
+	  echo "مدیر سایت ";
+	break;
+
+	case "level1":
+	  echo "نماینده سطح ۱";
+	 break;
+
+    case "level2":
+	  echo "نماینده سطح 2";
+	break;
+
+	case "level3":
+	    echo "نماینده سطح 3";
+	break;
+
+	case "shop_manager":
+    	echo "مدیر فروشگاه";
+	break;
+		
+
+	case "customer":
+		echo "مشتری";
+	break;	
+
+
+	case "subscriber":
+		echo "مشترک";
+	break;
+
+
+  }
+  
+?>
